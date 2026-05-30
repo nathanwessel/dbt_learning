@@ -7,16 +7,19 @@
     Try changing "table" to "view" below
 */
 
+-- materialization (view, table, ephemeral)
 {{ config(materialized='table') }}
 
+-- cte
 with source_data as (
 
     select 1 as id
     union all
-    select null as id
+    select 2 as id
 
 )
 
+-- select
 select *
 from source_data
 
