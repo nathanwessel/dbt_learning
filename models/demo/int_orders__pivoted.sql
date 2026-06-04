@@ -9,7 +9,7 @@ pivoted as
         purchase_id,
         {%- set purchase_statuses = ['PROCESSING', 'SHIPPED', 'DELIVERED'] -%}
         {% for status in purchase_statuses %}
-            sum(case when purchase_status = '{{ status }}' then PURCHASE_AMOUNT else 0 end) as {{ status | lower }}_amount
+            sum(case when purchase_status = '{{ status }}' then purchase_amount else 0 end) as {{ status | lower }}_amount
 
             {%- if not loop.last -%}
                 ,
