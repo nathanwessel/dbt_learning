@@ -8,7 +8,7 @@
 */
 
 -- materialization (view, table, ephemeral)
-{{ config(materialized='table') }}
+{{ config( materialized='table') }}
 
 -- cte
 with source_data as (

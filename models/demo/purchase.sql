@@ -13,6 +13,7 @@ with purchase_src as (
         PURCHASE_ID,
         PURCHASE_DATE,
         PURCHASE_STATUS,
+        123.45 as PURCHASE_AMOUNT,
         CREATED_AT,
         CURRENT_TIMESTAMP as INSERT_DTS,
         CURRENT_TIMESTAMP as UPDATE_DTS

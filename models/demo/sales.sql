@@ -15,6 +15,7 @@ with sales_src as
         PRODUCT_ID,
         QUANTITY,
         TOTAL_AMOUNT,
+        {{ calculate_unit_price("TOTAL_AMOUNT", 4) }} as PRICE_PER_UNIT,
         CREATED_AT,
         CURRENT_TIMESTAMP AS INSERT_DTS
     from {{source('sales', 'SALES_SRC')}}
