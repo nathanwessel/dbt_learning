@@ -1,9 +1,9 @@
 {{
-    config
-    (
-        materialized = 'table'
+    config(
+        materialized='view'
     )
 }}
+
 
 with clean_orders as 
 (
