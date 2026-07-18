@@ -22,9 +22,6 @@ clean-targets:
 models:
   nathan_dbt_workshop:
     +database: PC_DBT_DB
-    
-    example:
-        +schema: example 
     silver:
         +schema: silver
         +materialized: table
