@@ -1,1 +1,0 @@
-{{ union_tables_by_prefix(database='DBT_DB', schema='PUBLIC', prefix='customer_') }}
