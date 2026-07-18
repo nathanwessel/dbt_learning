@@ -1,7 +1,7 @@
 version: 2
 sources:
     - name: source
-      database: MYDB
+      database: MYNEWDB
       schema: BRONZE
       tables:
         - name: WORK_PRODUCT_COPY
