@@ -5,6 +5,14 @@ config-version: 2
 
 profile: "my_new_project"
 
+vars:
+   wrk_schema: BRONZE
+   file_format_csv: MYDB.BRONZE.MY_CSV_FORMAT
+   purge_status: FALSE
+   # why does it have a slash
+   stage_name: MYDB.BRONZE.s3_test_stage/
+   rawhist_db: MYDB
+
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
