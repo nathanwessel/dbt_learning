@@ -30,7 +30,8 @@ clean-targets:
   - "logs"
 
 models:
-  my_new_project:
+  dbt_learning:
+    +database: PC_DBT_DB
     staging:
       +materialized: view
 
