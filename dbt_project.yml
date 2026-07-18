@@ -1,26 +1,16 @@
-name: "dbt_learning"
+# name: "dbt_learning"
+name: "nathan_dbt_project"
 version: "1.0.0"
 config-version: 2
 
 profile: "my_new_project"
 
-model-paths:
-  - "models"
-
-analysis-paths:
-  - "analyses"
-
-test-paths:
-  - "tests"
-
-seed-paths:
-  - "seeds"
-
-macro-paths:
-  - "macros"
-
-snapshot-paths:
-  - "snapshots"
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
 
 target-path: "target"
 
@@ -30,13 +20,14 @@ clean-targets:
   - "logs"
 
 models:
-  dbt_learning:
+  nathan_dbt_workshop:
     +database: PC_DBT_DB
-    staging:
-      +materialized: view
-
-    intermediate:
-      +materialized: ephemeral
-
-    marts:
-      +materialized: table
+    
+    example:
+        +schema: example 
+    silver:
+        +schema: silver
+        +materialized: table
+    gold:
+        +schema: gold
+        +materialized: view
