@@ -9,5 +9,5 @@
                   'TECHNICAL_DETAILS', 'SHIPPING_WEIGHT', 'PRODUCT_DIMENSIONS'],
     )
 }}
-select * from {{ source('xfm', 'WORK_PRODUCT_TRANSFORM') }}
+select * from {{ ref('transform_product_load') }}
 {% endsnapshot %}
