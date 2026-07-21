@@ -1,5 +1,6 @@
 # name: "dbt_learning"
-name: "nathan_dbt_project"
+# name: "nathan_dbt_project"
+name: "nathan_dbt_workshop"
 version: "1.0.0"
 config-version: 2
 
