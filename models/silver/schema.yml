@@ -1,13 +1,10 @@
 version: 2
+
 sources:
-    - name: source
-      database: MYNEWDB
-      schema: BRONZE
-      tables:
-        - name: WORK_PRODUCT_COPY
-        
-    - name: xfm
-      database: PC_DBT_DB
-      schema: SILVER
-      tables:
-        - name: WORK_PRODUCT_TRANSFORM
+  - name: raw
+    database: WALMART_DB
+    schema: BRONZE
+    tables:
+      - name: DEPARTMENT_RAW
+      - name: FACT_RAW
+      - name: STORE_RAW
